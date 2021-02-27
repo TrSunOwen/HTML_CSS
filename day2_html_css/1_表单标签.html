@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+</head>
+<body>
+    <!--form 用于定义表单。可以定义一个范围，范围代表采集用户数据的范围-->
+    <!--用form把想要提交数据的对象全部包裹起来 -->
+    <!--action: 指定提交数据的URL-->
+    <!--method:分类：一共七种，两种比较常用
+                    get：
+                        1.请求参数会在地址栏中显示，会封装在请求行中（HTTP）
+                        2.请求参数的长度有限制
+                        3.不太安全
+                    post：
+                        1.请求参数不会在地址栏中显示，会封装在请求体中（HTTP）
+                        2.请求参数的长度没有限制
+                        3.比较安全
+                    表单项中的数据要想被提交，必须指定其name属性-->
+    <form action = "#" method = "post">
+        用户名: <input name = "username"><br>
+        密码: <input name="password"><br>
+        <input type = "submit" value="登录">
+    </form>
+</body>
+</html>
