@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Global对象</title>
+    <script>
+        /**
+         * 特点：全局对象，这个Global中封装的方法不需要对象即可直接调用
+         * 方法：
+            encodeURI()
+            decodeURI()
+
+            decodeURIComponent()
+            encodeURIComponent()
+         */
+        var str = "test";
+        var encode = encodeURI(str);
+        document.write(encode);
+
+        document.write("<br>");
+
+        var str = "aa123abc";
+        var r = parseInt(str);
+        alert(r + 1); // NaN
+
+        var str = "123abc";
+        var r = parseInt(str);
+        alert(r + 1); // 124
+
+        var a = NaN;
+        document.write(a == NaN); // false
+        document.write("<br>");
+        document.write(isNaN(a)); // true
+
+        var jscode = "alert(123)";
+        alert(jscode);
+
+        eval(jscode);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
