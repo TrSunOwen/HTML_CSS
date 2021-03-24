@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+    <script>
+        // alert("hahaha");
+        // window.alert("hello window");
+
+        // // confirm确认框
+        // var flag = confirm("确定退出嘛？");
+        // if(flag) {
+        //     alert("欢迎再次光临！");
+        // }
+        // else{
+        //     alert("手别抖！");
+        // }
+
+        // // 输入框
+        // var result = prompt("请输入用户名：");
+        // alert(result);
+    </script>
+</head>
+<body>
+    <input id="openBtn" type="button" value="打开窗口">
+    <input id="closeBtn" type="button" value="关闭窗口">
+
+    <script>
+        /* Window窗口对象
+    *   方法：
+    *   与弹出框有关的方法
+        *   alert()
+        *   confirm()
+            *   如果选择确定，则方法返回true；反之false
+        *   prompt()
+            *   返回值：用户输入的值
+    *   与打开关闭有关的方法
+        *   close()
+            注意：谁调用我，我关谁
+        *   open()
+            返回新Window对象
+    *   与定时器有关的方法
+        *   setTimeout() 按照指定的周期（以毫秒计）来调用函数或计算表达式
+            参数：
+             	1. js代码或者方法对象
+             	2. 毫秒值
+            返回值：唯一标识，用于取消定时器
+        *   clearTimeout()	取消由 setTimeout() 方法设置的 timeout
+        *   setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式
+            参数：
+             1. js代码或者方法对象
+             2. 毫秒值
+            返回值：唯一标识，用于取消定时器
+        *   clearInterval()	取消由 setInterval() 设置的 timeout
+    *   特点
+    *   不需要创建，直接调用即可。window.方法名();
+    *   window引用可以省略。 方法名();
+    *   属性：
+    *   获取其他BOM对象：
+        history
+        location
+        navigator
+        screen
+    *   获取DOM对象
+        document
+        */
+
+        // var openBtn = document.getElementById("openBtn");
+        // var newWindow;
+        // openBtn.onclick = function() {
+        //     // open()方法，打开新窗口
+        //     newWindow = open("https://www.google.com");
+        // }
+        //
+        // var closeBtn = document.getElementById("closeBtn");
+        // closeBtn.onclick = function() {
+        //     // 关闭窗口 close()
+        //     newWindow.close();
+        // }
+
+        // 一次性定时器
+        // 3种书写方式
+        // setTimeout("alert('boom!');", 2000);
+        // setTimeout("fun()", 2000);
+        // var id = setTimeout(fun, 2000);
+
+        // clearTimeout(id);
+
+        function fun() {
+            alert('boom!');
+        }
+
+        // 循环定时器
+        // var id = setInterval(fun, 2000);
+        // clearInterval(id);
+
+        // 获取history
+        var h1 = window.history;
+        var h2 = history;
+
+        // alert(h1);
+        // alert(h2);
+
+        // 获取DOM对象
+        var openBtn = window.document.getElementById("openBtn");
+        alert(openBtn);
+        // document.getElementById();
+    </script>
+
+</body>
+</html>

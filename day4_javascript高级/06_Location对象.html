@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+
+</head>
+<body>
+    <input id='btn' type="button" value="刷新">
+    <input id='go' type="button" value="走人">
+    <script>
+        // reload方法
+        // 定义一个按钮，按它之后，刷新页面
+
+        // 获取按钮
+        var btn = document.getElementById("btn");
+        // 绑定单击事件
+        btn.onclick = function() {
+            // 刷新页面
+            location.reload();
+        }
+
+        // 获取href
+        var href = location.href;
+        // alert(href);
+        // 点击按钮，走人去google
+        // 获取按钮
+        var go = document.getElementById("go");
+        // 绑定单击事件
+        go.onclick = function() {
+            // 刷新页面
+            location.href = "https://www.google.com";
+        }
+
+    </script>
+</body>
+</html>
