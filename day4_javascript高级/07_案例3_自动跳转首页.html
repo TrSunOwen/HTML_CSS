@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>案例：自动跳转首页</title>
+    <style>
+        p {
+          text-align: center;
+        }
+        span {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <p>
+        <span id="time">5</span>秒后自动跳转至首页...
+    </p>
+
+    <script>
+        var second = 5;
+        var time = document.getElementById("time");
+        function countDown() {
+            second--;
+            if(second > 0) {
+                time.innerHTML = second + "";
+            } else {
+                location.href = "https://www.google.com";
+            }
+        }
+
+        setInterval(countDown, 1000);
+    </script>
 
 </body>
 </html>
