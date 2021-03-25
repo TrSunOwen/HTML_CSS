@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document对象</title>
+</head>
+<body>
+
+<!--        Document文档对象-->
+<!--        -->
+<!--        *   创建（获取）：在HTML DOM 模型中，可以使用window.document-->
+<!--        1.  window.document-->
+<!--        2.  document-->
+<!--        *   方法：-->
+<!--        1.  获取Element对象-->
+<!--        1.  getElementById();-->
+<!--        2.  getElementsByTagName(); 返回数组-->
+<!--        3.  getElementsByClassName(); 返回数组-->
+<!--        4.  getElementsByName(); 返回数组-->
+<!--        2.  创建其他DOM对象-->
+<!--        1.  createAttribute(name)-->
+<!--        2.  createComment()-->
+<!--        3.  createElement()-->
+<!--        4.  createTextNode()-->
+
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <div id="div3">div3</div>
+
+    <div class="class1">div4</div>
+    <div class="class1">div5</div>
+    <div class="class2">div6</div>
+
+    <input type="text" name="username">
+
+    <script>
+        // var id = document.getElementById("div1");
+        // var tags = document.getElementsByTagName("div");
+        // alert(tags.length);
+        //
+        // var className = document.getElementsByClassName("class1");
+        // alert(className.length);
+        //
+        // var usrname = document.getElementsByName("username");
+        // alert(usrname.length);
+
+        var table = document.createElement("table");
+        alert(table);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element对象</title>
+</head>
+<body>
+<!--    Element元素对象-->
+<!--    -->
+<!--    *   获取、创建：通过document对象获取和创建-->
+<!--    *   方法：-->
+<!--    *   removeAttribute()-->
+<!--    *   setAttribute()-->
+
+    <a>点我试一试</a>
+    <br>
+    <input type="button" id="btn_set" value="设置属性">
+    <br>
+    <input type="button" id="btn_remove" value="清除属性">
+
+    <script>
+        var btn_set = document.getElementById("btn_set");
+        btn_set.onclick = function() {
+            // 设置属性
+            var element_a = document.getElementsByTagName("a")[0];
+            element_a.setAttribute("href", "https://www.google.com");
+        }
+
+        var btn_remove = document.getElementById("btn_remove");
+        btn_remove.onclick = function() {
+            // 设置属性
+            var element_a = document.getElementsByTagName("a")[0];
+            element_a.removeAttribute("href");
+        }
+    </script>
+</body>
+</html>
