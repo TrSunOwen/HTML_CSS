@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件</title>
+
+    <script>
+        // onload事件 等待页面加载完毕
+        // window.onload = function() {
+            // // 失去焦点事件 onblur
+            // document.getElementById("username").onblur = function (){
+            //     alert("失去焦点了！");
+            // }
+
+            // 鼠标移动到元素之上事件
+            // document.getElementById("username").onmouseover = function() {
+            //     alert("鼠标来了！");
+            // }
+
+            // 鼠标点击事件
+            // document.getElementById("username").onmousedown = function(event) {
+            //     // alert("鼠标点下去了！");
+            //     alert(event.button);
+            // }
+
+            // 键盘被按下
+            // document.getElementById("username").onkeydown = function(event) {
+            //     // alert("鼠标点下去了！");
+            //     // alert(event.keyCode);
+            //     if(event.keyCode == 13) {
+            //         alert("提交表单");
+            //     }
+            // }
+
+            // onchange	域的内容被改变。
+            // document.getElementById("city").onchange = function() {
+            //     alert("改变了");
+            // }
+
+            // onsubmit	确认按钮被点击。
+            // 可以阻止用户提交,方法返回false则阻止提交
+            // document.getElementById("form").onsubmit = function() {
+            //     var flag = false;
+            //     return flag;
+            // }
+
+            function checkForm() {
+                return false;
+            }
+        // }
+    </script>
+</head>
+<body>
+
+    <form action="#" id="form" onclick="return checkForm();">
+    <input id="username" name="username">
+    <select id="city">
+        <option>---请选择城市---</option>
+        <option>---北京---</option>
+        <option>---上海---</option>
+        <option>---广州---</option>
+    </select>
+    <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
